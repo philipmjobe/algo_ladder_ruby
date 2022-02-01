@@ -1,11 +1,11 @@
-array = [4, 2, 5, 99, -4]
+# array = [4, 2, 5, 99, -4]
 
 def double(array)
-  i = 0
-  while i < array.length
-    array[i] * 2
-    i += 1
-  end 
-end 
+  new_array = []
+  array.each do |n|
+    new_array << n * 2
+  end
+  return new_array 
+end
 
-p double(array) 
+p double([4, 2, 5, 99, -4])
