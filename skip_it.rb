@@ -7,3 +7,15 @@
 
 # Output:
 # [2, 3, 1, 2, 2, 1, 5, 2, 2]
+
+def skip(arr)
+  i = 0 
+  new_arr = []
+  while i < arr.length
+    new_arr << arr[i]
+    i += arr[i]
+  end 
+  return new_arr
+end 
+
+p skip([2, 1, 3, 2, 5, 1, 2, 6, 2, 7, 1, 5, 6, 3, 2, 6, 2, 1, 2])
