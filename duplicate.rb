@@ -2,3 +2,21 @@
 
 # Input: “abcdefghhijkkloooop”
 # Output: “h”
+
+def dup(str)
+  i = 1
+  j = 0
+  while j < str.length
+    dup = str[j]
+    while i < str.length
+      if str[i] == dup
+        return dup
+      end 
+      i += 1
+    end 
+    j += 1
+    i = j + 1
+  end 
+   return false
+end
+p dup("abcdefghhijkkloooop")
