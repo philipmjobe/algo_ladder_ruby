@@ -5,3 +5,9 @@
 
 # Input: “abcdefghijklmnopqrstuvwxyz”
 # Output: false
+
+def money(str)
+  (str =~ /$:/i) != nil
+end
+
+p money("abcdefghijklmnopqrstuvwxyz")
