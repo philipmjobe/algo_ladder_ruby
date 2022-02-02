@@ -2,3 +2,9 @@
 
 #   Input: “hello, how are your porcupines today?”
 #   Output: “hElLo, HoW ArE YoUr pOrCuPiNeS ToDaY?”
+
+def alt_capitalize(str)
+  str.chars.map.with_index {|c, i| i.odd? ? c.capitalize : c }.join
+end
+
+p alt_capitalize("hello, how are your porcupines today?")
