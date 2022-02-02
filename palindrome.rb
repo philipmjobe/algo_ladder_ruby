@@ -5,3 +5,23 @@
 
 # Input: “baloney”
 # Output: false
+
+def palindrome?(str)
+  str = str.downcase
+  i = 0
+  j = str.length - 1
+  while i < str.length
+    if str[i] == str[j]
+      i += 1
+      j -= 1
+      palindrome = true
+    else
+      palindrome = false
+      break
+    end
+  end
+  return palindrome
+end 
+
+p palindrome?("baloney")
+p palindrome?("racecar")
