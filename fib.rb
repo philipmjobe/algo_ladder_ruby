@@ -4,3 +4,19 @@
 
 # Input: 9
 # Output: 21 (as this is the 9th number of the Fibonacci Sequence)
+
+def fib(num)
+  fib = [0, 1]
+  if num <= 2
+    return fib[num - 1]
+  end 
+  (num - 2).times do
+    i = fib.length
+    arr1 = fib[i - 1]
+    arr2 = fib[i - 2]
+    arr3 = arr1.to_i + arr2.to_i
+    fib << arr3
+  end
+  return fib, fib[num - 1]
+end 
+p fib(200)
