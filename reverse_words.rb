@@ -3,13 +3,14 @@
 # Input: “popcorn is so cool isn’t it yeah i thought so”
 # Output: “so thought i yeah it isn’t cool so is popcorn”
 
-def reverse_string(string)
-  reversed_string = ""
-  i = string.length - 1
+def reverse_words(str)
+  reversed_word = ""
+  str = str.split(" ")
+  i = str.length - 1
   while i >= 0
-    reversed_string += string[i]
+    reversed_word += str[i] + " "
     i -= 1
   end 
-  return reversed_string
+  return reversed_word
 end
-p reverse_string("popcorn is so cool isn't it yeah i thought so")
+p reverse_words("popcorn is so cool isn't it yeah i thought so")
