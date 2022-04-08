@@ -19,3 +19,14 @@
 # 1
 
 # Resulting in 9 steps. So for input n = 12, the return value would be 9.
+
+def collatz(num)
+  steps = 0
+  while num != 1
+    num = num.even? ? num / 2 : num * 3 + 1
+    steps += 1
+  end
+  return steps
+end 
+
+p collatz(12)
