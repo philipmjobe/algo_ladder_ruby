@@ -11,3 +11,27 @@
 
 # [1, 2, 3, 97, 98, 99]
 # [90, 20, 70, 100, 30, 80, 10]
+
+def coolio(nums)
+  i = 0
+  j = - 1
+  while i < nums.length / 2
+    if nums[i] + nums[j] != 100
+      return false
+    end
+    i += 1
+    j -= 1
+  end
+  if nums.length % 2 == 1
+    if nums[nums.length / 2] == 100
+      return true
+    else 
+      return false
+    end
+  end
+  return true
+end
+
+p coolio([1, 2, 3, 97, 98, 99])
+p coolio([90, 20, 70, 100, 30, 80, 10])
+p coolio([90, 20, 70, 50, 30, 80, 10])
