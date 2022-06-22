@@ -14,3 +14,16 @@
 # Note:
 
 # All given inputs are in lowercase letters a-z.
+
+def common(str1, str2)
+  common = ""
+  i = 0
+  while str1[i] == str2[i]
+    common += str1[i]
+    i += 1
+  end
+  common
+end
+
+p common("flower","flow")
+p common("dog","racecar")
