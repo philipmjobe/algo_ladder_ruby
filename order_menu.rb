@@ -5,3 +5,16 @@
 # Output: 14
 
 # Explanation: If someone would order one of everything on the menu, they'd pay a total of 14 (the sum of all the hash's values).
+
+menu = {"hot dog" => 2, "hamburger" => 3, "steak sandwich" => 5, "fries" => 1, "cole slaw" => 1, "soda" => 2}
+
+def total(menu)
+  price = 0
+
+  menu.each do |item|
+    price += item.last
+  end 
+  price
+end 
+
+p total(menu)
