@@ -13,3 +13,19 @@
 
 # Input: 'ACGTGGTCTTAA'
 # Output: 'UGCACCAGAAUU'
+
+def rna(dna)
+  rna_strand = ""
+  rna_hash = {
+    "G" => "C",
+    "C" => "G",
+    "T" => "A",
+    "A" => "U",
+  }
+  dna.each_char do |dna|
+    rna_strand << rna_hash[dna]
+  end
+  rna_strand
+end
+
+p rna("ACGTGGTCTTAA")
