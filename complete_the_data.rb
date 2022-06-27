@@ -21,3 +21,27 @@
 # {title: 'best selfie evar!!!', submitted_by: "Patti Q.", likes: 1092},
 # {title: 'Mondays are the worst', submitted_by: "Aunty Em", likes: 644}
 # ]
+
+def complete(sm_posts)
+
+  users = {403 => "Aunty Em", 231 => "Joelle P.", 989 => "Lyndon Johnson", 111 => "Patti Q."}
+
+  usernames = []
+
+  sm_posts.each do |post|
+    new_post_hash = {}
+    new_post_hash[:title] = post[:title]
+    new_post_hash[:submitted_by] = users[post[:submitted_by]]
+    new_post_hash[:likes] = post[:likes]
+    usernames << new_post_hash
+    # puts usernames
+  end
+  usernames 
+end
+
+p complete([
+  {title: 'Me Eating Pizza', submitted_by: 231, likes: 1549},
+  {title: 'i never knew how cool i was until now', submitted_by: 989, likes: 3},
+  {title: 'best selfie evar!!!', submitted_by: 111, likes: 1092},
+  {title: 'Mondays are the worst', submitted_by: 403, likes: 644}
+  ])
