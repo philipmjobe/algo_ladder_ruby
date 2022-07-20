@@ -1,11 +1,8 @@
-# # Given a hash, return a flat array containing all the hash’s keys and values.
+# Given a hash, create a new hash that has the keys and values switched.
 
-# # Input: {“a” => 1, “b” => 2, “c” => 3, “d” => 4}
-# # Output: [“a”, 1, “b”, 2, “c”, 3, “d”, 4]
+# Input: {"a" => 1, "b" => 2, "c" => 3}
+# Output: {1 => "a", 2 => "b", 3 => "c"}
 
-# def flatten(hash)
-#   arr_hash = hash.to_a
-#   arr_hash.flatten
-# end
+hash = {"a" => 1, "b" => 2, "c" => 3}
 
-# p flatten({"a" => 1, "b" => 2, "c" => 3, "d" => 4})
+p hash.invert
