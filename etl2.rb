@@ -73,3 +73,13 @@
 # 'y' => 4,
 # 'z' => 10
 # }
+
+def a_to_h(array)
+  h = {}
+  array.each do |char|
+    h[char]
+  end
+  h 
+end 
+
+p a_to_h(1 => ["A", "E", "I", "O", "U"])
