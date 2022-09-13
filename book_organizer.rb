@@ -28,3 +28,28 @@
 # {title: "The Great Gatsby", year: 1925 }
 # ]
 # }
+
+def author(books)
+  author = Hash.new([])
+  books.each do |book|
+    author[book[:author]]
+    if author[book[:author]].length == 0
+      author[book[:author]] = [title: [book[:title]], year: [book[:year]]]
+    else
+      author[book[:author]] << [title: [book[:title]], year: [book[:year]]]
+    end
+  end
+  author
+end 
+
+pp author(
+  [
+{title: "The Lord of the Rings", author: "J. R. R. Tolkien", year: 1954 },
+{title: "To Kill a Mockingbird", author: "Harper Lee", year: 1960 },
+{title: "1984", author: "George Orwell", year: 1949 },
+{title: "Go Set a Watchman", author: "Harper Lee", year: 2015 },
+{title: "The Hobbit", author: "J. R. R. Tolkien", year: 1937 },
+{title: "The Great Gatsby", author: "F. Scott Fitzgerald", year: 1925 },
+{title: "The Two Towers", author: "J. R. R. Tolkien", year: 1954 }
+]
+)
