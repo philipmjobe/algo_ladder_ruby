@@ -74,12 +74,14 @@
 # 'z' => 10
 # }
 
-def a_to_h(array)
-  h = {}
-  array.each do |char|
-    h[char]
+def etl2(hash)
+  h = Hash.new
+  hash.each_pair do |key, value_array|
+    value_array.each do |letter|
+      h[letter.downcase] = key
+    end
   end
-  h 
+  h = h.sort_by { |letter, value | letter }.to_h
 end 
 
-p a_to_h(1 => ["A", "E", "I", "O", "U"])
+p etl2(1 => ["A", "E", "I", "O", "U"])
